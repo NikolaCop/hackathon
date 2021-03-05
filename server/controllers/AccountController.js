@@ -8,6 +8,7 @@ export class AccountController extends BaseController {
     this.router
       .use(Auth0Provider.getAuthorizedUserInfo)
       .get('', this.getUserAccount)
+      // .put('', this.updateRank)
   }
 
   async getUserAccount(req, res, next) {
@@ -18,4 +19,12 @@ export class AccountController extends BaseController {
       next(error)
     }
   }
+
+  // async updateRank(req, res, next){
+  //   try {
+  //     const rank = await accountService.updateRank
+  //   } catch (error) {
+
+  //   }
+  // }
 }

@@ -1,6 +1,7 @@
 import express from 'express'
 import BaseController from '../utils/BaseController'
 import { gamesService } from '../services/GamesService'
+import { postsService } from '../services/PostsService'
 
 export class GamesController extends BaseController {
   constructor() {
@@ -8,9 +9,18 @@ export class GamesController extends BaseController {
     this.router
       .get('', this.getAll)
       .get('/:id', this.getgamebyId)
+      .get('/:id/posts', this.getAllPostsByGameId)
       .post('', this.createGame)
       // .put('/:id', this.editGame)
       .delete('/:id', this.deleteGame)
+  }
+
+  async getAllPostsByGameId(req, res, next) {
+    try {
+      res.send(await postsService.find({ game: req.params.id }))
+    } catch (error) {
+      next(error)
+    }
   }
 
   async getAll(req, res, next) {

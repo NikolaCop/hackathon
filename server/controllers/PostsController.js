@@ -1,6 +1,7 @@
-import express from 'express'
+// import express from 'express'
 import BaseController from '../utils/BaseController'
 import { postsService } from '../services/PostsService'
+import { signupsService } from '../services/SignupsService'
 
 export class PostsController extends BaseController {
   constructor() {

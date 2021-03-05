@@ -2,13 +2,13 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 const ObjectId = mongoose.SchemaTypes.ObjectId
 
-const Post = new Schema(
+const Signup = new Schema(
   {
-    game: { type: ObjectId, ref: 'Game', required: true },
-    wantedNum: { type: Number, required: true }
+    post: { type: ObjectId, ref: 'Post', required: true },
+    account: { type: String, ref: 'Account', required: true }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 
 )
 
-export default Post
+export default Signup

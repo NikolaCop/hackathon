@@ -5,6 +5,24 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+/* 
+.profile-height{
+  height: 100vh;
+} */
+
+.game-height{
+  height: 20vh;
+}
+
+.postition{
+  position: absolute;
+}
+
+.game-column-height{
+  height: 16vh;
+}
+
 :root {
   --blue: blue;
   --indigo: indigo;

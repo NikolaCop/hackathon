@@ -2,6 +2,7 @@
 import BaseController from '../utils/BaseController'
 import { postsService } from '../services/PostsService'
 import { signupsService } from '../services/SignupsService'
+import { commentsService } from '../services/CommentsService'
 
 export class PostsController extends BaseController {
   constructor() {

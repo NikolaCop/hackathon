@@ -5,6 +5,7 @@ import AccountSchema from '../models/Account'
 import GameSchema from '../models/Game'
 import PostSchema from '../models/Post'
 import SignupSchema from '../models/Signup'
+import CommentSchema from '../models/Comment'
 
 class DbContext {
   Values = mongoose.model('Value', ValueSchema);
@@ -14,6 +15,7 @@ class DbContext {
 
   Posts = mongoose.model('Posts', PostSchema);
   Signups = mongoose.model('Signups', SignupSchema)
+  Comments = mongoose.model('Comments', CommentSchema)
 }
 
 export const dbContext = new DbContext()

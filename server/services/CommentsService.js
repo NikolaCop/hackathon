@@ -8,17 +8,14 @@ class CommentsService {
   }
 
   async vote(vote, id) {
-    // FIXME Score isn't ever updating
     let body = {}
-    body = await dbContext.Comments.findById(id).populate('comment')
-    console.log(body.score)
+    body = await dbContext.Comments.findById(id)
     if (vote) {
-      body.score++
+      body._doc.score++
     } else {
-      body.score--
+      body._doc.score--
     }
-    body.score = 10
-    return await dbContext.Comments.findByIdAndUpdate(body)
+    return await dbContext.Comments.findOneAndUpdate(id, body._doc)
   }
 
   async createComment(body) {

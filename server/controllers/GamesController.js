@@ -41,7 +41,7 @@ export class GamesController extends BaseController {
 
   async createGame(req, res, next) {
     try {
-      res.send(201, await gamesService.createGame(req.body))
+      res.send(await gamesService.createGame(req.body)).status(201)
     } catch (error) {
       next(error)
     }

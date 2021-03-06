@@ -10,6 +10,30 @@
 .profile-height{
   height: 100vh;
 } */
+.cgw{
+  width: 125px;
+}
+
+
+
+#cardbg{
+  background: #8310ca;
+  border-radius: 50px;
+  border-color: black;
+}
+
+#navbg{
+  background-color: #6c04b6;
+}
+
+/* #main{
+  background-image: url("https://media.istockphoto.com/vectors/vector-seamless-pattern-background-icon-vector-id1170275727?k=6&m=1170275727&s=612x612&w=0&h=GrMw64_iHMm-ectfliHlneMSb7eNoYFfuw81VPqfG94=");
+  background-repeat: no-repeat;
+} */
+
+body{
+  background-image: url("https://media.istockphoto.com/vectors/vector-seamless-pattern-background-icon-vector-id1170275727?k=6&m=1170275727&s=612x612&w=0&h=GrMw64_iHMm-ectfliHlneMSb7eNoYFfuw81VPqfG94=");
+}
 
 .game-height{
   height: 20vh;

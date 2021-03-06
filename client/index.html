@@ -9,9 +9,9 @@
     <title>Squad Up</title>
 </head>
 
-<body>
+<body class="">
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-dark navbar-expand text-light" id="navbg">
             <a class="navbar-brand" href="#">
                 <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
                 <span class="ml-2">Squad Up</span>
@@ -27,62 +27,37 @@
             <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
         </nav>
     </header>
-    <main class="container-fluid">
-        <div class="row justify-content-between">
-            <div class="col-2 card profile-height overflow-auto">
+    <main class="container-fluid" id="main">
+
+
+
+        <div class="row justify-content-between vh-100">
+            <div class="col-2 card profile-height overflow-auto text-light" id="navbg">
                 <img src="https://i.stack.imgur.com/l60Hf.png">
                 <h6>Profile Name</h6>
                 <h6>Rank Name</h6>
                 <h6>Gamer Tag</h6>
+                <form class="m-2 form-inline" onsubmit="app.gamesController.createGame(event)">
+                    <div class="form-group">
+                        <input type="text" name="game-title" id="name" class="form-control"
+                            placeholder="Enter Game Here..." aria-describedat="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="game-desc" id="description" class="form-control"
+                            placeholder="Enter Game Discription..." aria-describedat="helpId">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="imgUrl" id="img" class="form-control" placeholder="ImgUrl"
+                            aria-describedby="helpId">
+                    </div>
+                    <button class="btn btn-info d-flex text-center m-2 cgw" type="submit">Add Game</button>
+                </form>
             </div>
+            <div class="col-10" id="games">
 
-            <div class="col-4 card mt-4">
-                <div class="row">
-                    <div class="col-6 mt-4"><img width="290" src="https://pngimg.com/uploads/call_of_duty/call_of_duty_PNG24.png" alt=""></div>
-                    <div class="col-6">
-                        <div class="row ml-5">
-                            <div class="col-12 mt-3"><h3>Game Title</h3></div>
-                            <div class="col-12 mt-3 game-column-height"><h6>Game Description</h6></div>
-                            <div class="col-4 mt-3"><button class="btn btn-success">Add</button></div>
-                            <div class="col-4 mt-3"><button class="btn btn-success">View</button></div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            <div class="col-4 card post-height mt-4 mr-4">
-                <h1>Post Area</h1>
-                <h5 class="m-2">
-                <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="" id="" value="checkedValue"> Display value
-                    </label>
-                </div>
-                </h5>
-                <h5 class="m-2">
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" name="" id="" value="checkedValue"> Display value
-                        </label>
-                    </div>
-                    </h5>
-                    <h5 class="m-2">
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" name="" id="" value="checkedValue"> Display value
-                            </label>
-                        </div>
-                        </h5>
-                        <form class="form-inline m-3">
-                            <div class="form-group">
-                                <label for=""></label>
-                                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                                <button class="btn btn-success ml-2">Add Comment</button>
-                            </div>
-                        </form>
-                        <div class="row">
-                            <div class="col-12 card bg-dark text-light p-3 shadow-lg">Hey</div>
-                        </div>
+
             </div>
+        </div>
         </div>
     </main>
     <footer class="container-fluid bg-dark text-light">

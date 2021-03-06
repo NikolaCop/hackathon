@@ -50,7 +50,7 @@ export class PostsController extends BaseController {
 
   async createPost(req, res, next) {
     try {
-      res.send(201, await postsService.createPost(req.body))
+      res.send(await postsService.createPost(req.body)).status(201)
     } catch (error) {
       next(error)
     }

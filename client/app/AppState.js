@@ -3,6 +3,7 @@ import Profile from "./Models/Profile.js"
 import Game from "./Models/Game.js"
 import Post from "./Models/Post.js"
 import TeamSignUp from "./Models/TeamSignUp.js"
+import Comment from "./Models/Comment.js"
 import { isValidProp } from './Utils/isValidProp.js'
 
 class AppState extends EventEmitter {
@@ -23,6 +24,9 @@ class AppState extends EventEmitter {
   /**@type {TeamSignUp[]} */
 
   teamSignUps = []
+  /**@type {Comment[]} */
+
+  comments = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
